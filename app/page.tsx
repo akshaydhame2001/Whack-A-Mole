@@ -53,7 +53,7 @@ export default function Home() {
       <h3 className="text-center font-bold text-lg mt-2 text-slate-700 ">
         Score: {score}
       </h3>
-      <div className="grid w-[500px] grid-cols-3 mx-auto my-0 h-[500px] p-2 place-items-center">
+      <div className="grid max-w-[500px] grid-cols-3 mx-auto my-0 h-[500px] p-2 place-items-center">
         {moles.map((isMole, idx) => (
           <Image
             key={idx}
