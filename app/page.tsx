@@ -45,9 +45,15 @@ export default function Home() {
   }, [moles]);
 
   return (
-    <>
-      <h1 className="text-center">Score: {score}</h1>
-      <main className="grid w-[768px] grid-cols-3 mx-auto my-0 min-h-screen p-24">
+    <div className="min-h-screen">
+      <h1 className="text-center font-bold text-4xl pt-8 text-yellow-500">
+        Whack-A-Mole
+      </h1>
+
+      <h3 className="text-center font-bold text-lg mt-2 text-slate-700 ">
+        Score: {score}
+      </h3>
+      <div className="grid w-[500px] grid-cols-3 mx-auto my-0 h-[500px] p-2 place-items-center">
         {moles.map((isMole, idx) => (
           <Image
             key={idx}
@@ -62,7 +68,7 @@ export default function Home() {
             }}
           />
         ))}
-      </main>
-    </>
+      </div>
+    </div>
   );
 }
